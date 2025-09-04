@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent 7 Gaming Clan </title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            overflow-x: hidden;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ff7700;
+            letter-spacing: 1.5px;
+        }
+        
+        .logo span {
+            color: #00aaff;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        h1 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 62px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            color: #ff7700;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #ff7700, #ffaa00, #ff7700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s infinite linear;
+        }
+        
+        @keyframes shine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        .subtitle {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            line-height: 1.4;
+            background: linear-gradient(to right, #ff5e62, #ff9966, #ff5e62, #00aaff, #ff5e62);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: pulse 4s infinite alternate;
+            padding: 10px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.02); }
+        }
+        
+        .discord-btn {
+            background: linear-gradient(135deg, #7289da, #5b6eae);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .discord-btn:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ff7700, #00aaff, #ffaa00, #ff7700);
+            z-index: -1;
+            background-size: 400%;
+            border-radius: 50px;
+            animation: glowing 20s linear infinite;
+            filter: blur(15px);
+        }
+        
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        
+        .discord-btn:hover {
+            background: linear-gradient(135deg, #677bc4, #4a5c95);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 60px 0;
+            gap: 20px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 119, 0, 0.15);
+        }
+        
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffaa00;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .feature p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+        
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #ff7700;
+        }
+        
+        .gaming-section {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 40px 0;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 119, 0, 0.3);
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gaming-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .gaming-overlay h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff7700;
+        }
+        
+        .gaming-overlay p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaaaaa;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 42px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+                padding: 0 15px;
+            }
+            
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .feature {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .gaming-section {
+                height: 300px;
+            }
+            
+            .gaming-overlay {
+                padding: 20px;
+            }
+            
+            .gaming-overlay h2 {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .discord-btn {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+            
+            .logo {
+                font-size: 28px;
+            }
+            
+            .gaming-section {
+                height: 250px;
+            }
+            
+            .gaming-overlay h2 {
+                font-size: 24px;
+            }
+            
+            .gaming-overlay p {
+                font-size: 16px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">TALENT <span>7</span> GAMING CLAN</div>
+        </header>
+        
+        <section class="hero">
+            <h1>JOIN OUR  COMMUNITY</h1>
+            <p class="subtitle">Daily giveaways, events, and the friendliest gaming community on Discord. Join Talent 7 Gaming Clan today!</p>
+            <a href="https://discord.gg/wAgVfrHQxG" class="discord-btn">Join Discord</a>
+        </section>
+        
+        <!-- <div class="gaming-section">
+            <div class="gaming-overlay">
+                <h2> Gaming clans </h2>
+                <p>Join our daily tournaments and compete for amazing prizes. We host events for all skill levels!</p>
+            </div>
+        </div> -->
+        
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon">🎮</div>
+                <h3>Daily Giveaways</h3>
+                <p>We host daily giveaways with awesome prizes for our active community members. Don't miss out!</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👥</div>
+                <h3>Friendly Community</h3>
+                <p>Our members are welcoming and inclusive. Make new friends and have fun together!</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🏆</div>
+                <h3>Competitive Events</h3>
+                <p>Regular  events with cash prizes and exclusive rewards.</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2025 Talent 7 Gaming Clan. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
